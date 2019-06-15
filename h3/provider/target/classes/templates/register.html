@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>用户注册</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+    <form action="/signin" method="POST">
+        <p>用户名</p>
+        <input type="text" name="username" value="" placeholder="用户名" />
+        <p>密码</p>
+        <input type="text" name="password" value="" placeholder="密码"/>
+        <p>确认密码</p>
+        <input type="text" name="password" value="" placeholder="再来一次"/>
+        <p>电话</p>
+        <input type="text" name="mobile" value="" placeholder="电话"/>
+        <p>地址</p>
+        <input type="text" name="address" value="" placeholder="地址"/>
+        <br/>
+        <br/>
+        <input type="submit" value="注册"/>
+        <br/>
+        <br/> 
+        <p >已有账号，<a href="login.html">前往登录</a></P>
+    </form>
+</body>
+</html>

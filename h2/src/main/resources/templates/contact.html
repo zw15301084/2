@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Contact</title>
+    <!---css--->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <link href="css/style1.css" rel='stylesheet' type='text/css'/>
+    <!---css--->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content=""/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!---js--->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!---js--->
+    <!--web-fonts-->
+    <link href='http://fonts.useso.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic'
+          rel='stylesheet' type='text/css'>
+    <!--//web-fonts-->
+    <!--JS for animate-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!--//end-animate-->
+
+</head>
+<body>
+<!---header--->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header wow fadeInLeft animated animated" data-wow-delay="0.4s">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1><a class="navbar-brand" href="index.html"><img src="images/e.png"/> XiFoo Gym</a></h1>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right wow fadeInRight animated animated" data-wow-delay="0.4s">
+                <li class="active"><a class="nav-in" href="index.html"><span data-letters="Home">Home</span></a></li>
+                <!--<li><a class="nav-in" href="about.html"><span data-letters="About">About</span></a></li>
+                <li><a class="nav-in" href="class.html"><span data-letters="Classes">Classes</span></a></li>
+                <li><a class="nav-in" href="trainers.html"><span data-letters="Trainers">Trainers</span></a></li>
+                <li><a class="nav-in" href="codes.html"><span data-letters="Codes">Codes</span></a></li>-->
+                <li><a class="nav-in" href="/trainerPage"><span data-letters="Trainers">Trainers</span></a></li>
+                <li><a class="nav-in" href="/signInPage"><span data-letters="Contact">Contact</span></a></li>
+
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<!---banner--->
+<div class="banner wow fadeInDownBig animated animated" data-wow-delay="0.4s">
+    <div class="container">
+        <h2>Sign In</h2>
+    </div>
+</div>
+<div class="contact w3l">
+    <div class="map wow fadeInUpBig animated animated" data-wow-delay="0.4s">
+        <iframe src="http://www.google.cn/maps/embed?pb=!1m18!1m12!1m3!1d3058.508826968934!2d116.34481631474621!3d39.95237509167434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f053c7be0bb207%3A0xc6e5df2ad07265b0!2z5YyX5Lqs5Lqk6YCa5aSn5a2m!5e0!3m2!1szh-CN!2scn!4v1555321079544!5m2!1szh-CN!2scn"></iframe>
+    </div>
+    <div class="map-grids w3-agile">
+        <div class=" map-middle wow fadeInRight animated animated" data-wow-delay="0.4s">
+            <form action="customerSignIn" method="post">
+                <input type="text" name="username" placeholder="Name" required="">
+                <input type="password" name="password" class="email" placeholder="PassWord" required="">
+                <input type="submit" value="LogIn">
+            </form>
+            <div class="tip">
+                <a href="#" class="fpassword"><a
+                    href="#">Forget Password</a></a>
+                <a href="#" class="signup"><a
+                    href="/signUpPage">To Sign Up</a></a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+</body>
+</html>

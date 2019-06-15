@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="zh-CN">
+<head>
+    <link href="css/person.css" rel="stylesheet">
+</head>
+<body>
+<div id="juejin" data-v-514f306c=""></div>
+<div data-v-2a2212a5="" data-v-2d2ab30a="" data-v-514f306c="" class="view-container">
+    <div data-v-2a2212a5="" class="main-header-box">
+        <header data-v-1d573a7b="" data-v-2a2212a5="" class="main-header main-header visible">
+            <div data-v-1d573a7b="" class="container">
+                <a data-v-1d573a7b="" href="/" class="logo">
+                    <img data-v-1d573a7b="" src="images/e.png" alt="xifoo" class="logo-img">
+                    XiFoo Gym</a>
+                <nav data-v-1d573a7b="" role="navigation" class="main-nav">
+                    <ul data-v-1d573a7b="" class="nav-list">
+                        <li data-v-1d573a7b="" class="main-nav-list">
+                            <ul data-v-1d573a7b="" class="phone-hide">
+                                <li data-v-1d573a7b="" class="nav-item link-item route-active">
+                                    <a data-v-1d573a7b="" href="/home">home</a>
+                                </li>
+                                <li data-v-1d573a7b="" class="nav-item link-item activities">
+                                    <a data-v-1d573a7b="" href="/trainerPage">Traine</a>
+                                </li>
+                                <li data-v-1d573a7b="" class="nav-item link-item activities" th:if="${user!=null}">
+                                    <a data-v-1d573a7b="" href="/p" th:text="${user.username}">Traine</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <main data-v-2a2212a5="" class="container main-container with-view-nav">
+        <nav data-v-2d2ab30a="" data-v-2a2212a5="" role="navigation" class="view-nav">
+            <ul data-v-2d2ab30a="" data-v-2a2212a5="" class="nav-list">
+                <li data-v-2d2ab30a="" class="nav-item router-link-exact-active route-active active" data-v-2a2212a5="">
+                    <a data-v-2d2ab30a="" href="/person">个人资料</a>
+                </li>
+                <!--<li data-v-2d2ab30a="" class="nav-item" data-v-2a2212a5="">
+                    <a data-v-2d2ab30a="" href="/user/settings/account">账号关联</a>
+                </li>-->
+                <li data-v-2d2ab30a="" class="nav-item" data-v-2a2212a5="">
+                    <a data-v-2d2ab30a="" href="/user/settings/password">修改密码</a>
+                </li>
+                <!--<li data-v-2d2ab30a="" class="nav-item" data-v-2a2212a5="">
+                    <a data-v-2d2ab30a="" href="/user/settings/mail">邮件设置</a>
+                </li>-->
+            </ul>
+        </nav>
+        <div data-v-2d2ab30a="" data-v-2a2212a5="" class="view setting-view">
+            <div data-v-2d2ab30a="" data-v-2a2212a5="" class="sub-view-box shadow">
+                <div data-v-d8c2262c="" data-v-2d2ab30a="" class="view setting-profile-view" data-v-2a2212a5="">
+                    <h1 data-v-d8c2262c="">个人资料</h1><ul data-v-d8c2262c="" class="setting-list">
+                    <li data-v-d8c2262c="" class="item"><span data-v-d8c2262c="" class="title">头像</span>
+                        <div data-v-1cc8b934="" data-v-d8c2262c="" class="avatar-uploader avatar-uploader">
+                            <input data-v-1cc8b934="" type="file" class="input">
+                            <div data-v-eef614a8="" data-v-702c1ac0="" data-v-1cc8b934="" data-src="https://b-gold-cdn.xitu.io/v3/static/img/default-avatar.e30559a.svg" class="lazy avatar avatar loaded" style="background-image: url(&quot;https://b-gold-cdn.xitu.io/v3/static/img/default-avatar.e30559a.svg&quot;);">
+                            </div>
+                            <div data-v-1cc8b934="" class="action-box">
+                                <div data-v-1cc8b934="" class="hint">支持 jpg、png 格式大小 5M 以内的图片</div>
+                                <button data-v-1cc8b934="" class="upload-btn">点击上传</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-v-d8c2262c="" class="item">
+                        <span data-v-d8c2262c="" class="title">用户名</span>
+                        <div data-v-5712e344="" data-v-d8c2262c="" class="input-box profile-input profile-input">
+                            <input data-v-5712e344="" spellcheck="false" placeholder="填写你的用户名" class="input">
+                            <div data-v-5712e344="" class="action-box">
+                                <button data-v-5712e344="" tabindex="-1" class="btn edit-btn">
+                                    <a data-v-5712e344="">修改</a>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-v-d8c2262c="" class="item">
+                        <span data-v-d8c2262c="" class="title">地址</span>
+                        <div data-v-5712e344="" data-v-d8c2262c="" class="input-box profile-input profile-input">
+                            <input data-v-5712e344="" spellcheck="false" placeholder="填写你的职位" class="input">
+                            <div data-v-5712e344="" class="action-box">
+                                <button data-v-5712e344="" tabindex="-1" class="btn edit-btn">
+                                    <a data-v-5712e344="">修改</a>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <!--<li data-v-d8c2262c="" class="item">
+                        <span data-v-d8c2262c="" class="title">公司</span>
+                        <div data-v-5712e344="" data-v-d8c2262c="" class="input-box profile-input profile-input">
+                            <input data-v-5712e344="" spellcheck="false" placeholder="填写你的公司" class="input">
+                            <div data-v-5712e344="" class="action-box">
+                                <button data-v-5712e344="" tabindex="-1" class="btn edit-btn">
+                                    <a data-v-5712e344="">修改</a>
+                                </button>
+                            </div>
+                        </div>
+                    </li>-->
+                    <!--<li data-v-d8c2262c="" class="item">
+                        <span data-v-d8c2262c="" class="title">个人介绍</span>
+                        <div data-v-5712e344="" data-v-d8c2262c="" class="input-box profile-input profile-input">
+                            <input data-v-5712e344="" spellcheck="false" placeholder="填写职业技能、擅长的事情、喜欢的事情等" class="input">
+                            <div data-v-5712e344="" class="action-box">
+                                <button data-v-5712e344="" tabindex="-1" class="btn edit-btn">
+                                    <a data-v-5712e344="">修改</a>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-v-d8c2262c="" class="item">
+                        <span data-v-d8c2262c="" class="title">个人主页</span>
+                        <div data-v-5712e344="" data-v-d8c2262c="" class="input-box profile-input profile-input">
+                            <input data-v-5712e344="" spellcheck="false" placeholder="填写你的个人主页" class="input">
+                            <div data-v-5712e344="" class="action-box">
+                                <button data-v-5712e344="" tabindex="-1" class="btn edit-btn">
+                                    <a data-v-5712e344="">修改</a>
+                                </button>
+                            </div>
+                        </div>
+                    </li>-->
+                </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+</div>
+
+</body>
+</html>

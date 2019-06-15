@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>Trainers</title>
+    <!---css--->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <link href="css/style1.css" rel='stylesheet' type='text/css'/>
+    <!---css--->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content=""/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!---js--->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!---js--->
+    <!--web-fonts-->
+    <link href='http://fonts.useso.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic'
+          rel='stylesheet' type='text/css'>
+    <!--//web-fonts-->
+    <link href="css/galleryeffect.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <!--JS for animate-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!--//end-animate-->
+
+
+</head>
+<body>
+<!---header--->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header wow fadeInLeft animated animated" data-wow-delay="0.4s">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1><a class="navbar-brand" href="index.html"><img src="images/e.png"/> XiFoo Gym</a></h1>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right wow fadeInRight animated animated" data-wow-delay="0.4s">
+                <li class="active"><a class="nav-in" href="/home"><span data-letters="Home">Home</span></a></li>
+                <!--<li><a class="nav-in" href="about.html"><span data-letters="About">About</span></a></li>
+                <li><a class="nav-in" href="class.html"><span data-letters="Classes">Classes</span></a></li>
+                <li><a class="nav-in" href="trainers.html"><span data-letters="Trainers">Trainers</span></a></li>
+                <li><a class="nav-in" href="codes.html"><span data-letters="Codes">Codes</span></a></li>-->
+                <li><a class="nav-in" href="/trainerPage"><span data-letters="Trainers">Trainers</span></a></li>
+                <li><a class="nav-in" href="/signInPage" th:if="${user==null}"><span data-letters="SignIn">SignIn</span></a></li>
+                <li><a class="nav-in" href="/home" th:if="${user!=null}"><span class="username" th:text="${user.username}"></span></a></li>
+
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<!---banner--->
+<div class="banner wow fadeInDownBig animated animated" data-wow-delay="0.4s">
+    <div class="container">
+        <h2>Trainers</h2>
+    </div>
+</div>
+<div class="trainers-section wow bounceIn animated" data-wow-delay="0.4s"
+     style="visibility: visible; -webkit-animation-delay: 0.4s;">
+    <div class="container">
+        <section>
+            <ul class="lb-album">
+                <li class="grid">
+                    <a href="#image-2">
+                        <figure class="effect-apollo">
+                            <img src="images/t1.jpg" alt="image2">
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="lb-overlay" id="image-2">
+                        <img src="images/t1.jpg" alt="image2"/>
+                        <div class="gal-info">
+                            <a href="/home" class="">PICK</a>
+                            <h3 th:text="${coachs[0].username}"></h3>
+                            <p th:text="${coachs[0].motto}">/p>
+                        </div>
+                        <a href="#" class="lb-close">Close</a>
+                    </div>
+                </li>
+                <li class="grid">
+                    <a href="#image-1">
+                        <figure class="effect-apollo">
+                            <img src="images/t2.jpg" alt="image1">
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="lb-overlay" id="image-1">
+                        <img src="images/t2.jpg" alt="image1"/>
+                        <div class="gal-info">
+                            <a href="/home" class="">PICK</a>
+                            <h3 th:text="${coachs[1].username}"></h3>
+                            <p th:text="${coachs[1].motto}">/p>
+                        </div>
+                        <a href="#" class="lb-close">Close</a>
+                    </div>
+                </li>
+                <li class="grid">
+                    <a href="#image-3">
+                        <figure class="effect-apollo">
+                            <img src="images/t3.jpg" alt="image3">
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="lb-overlay" id="image-3">
+                        <img src="images/t3.jpg" alt="image3"/>
+                        <div class="gal-info">
+                            <a href="/home" class="">PICK</a>
+                            <h3 th:text="${coachs[2].username}"></h3>
+                            <p th:text="${coachs[2].motto}">/p>
+                        </div>
+                        <a href="#" class="lb-close">Close</a>
+                    </div>
+                </li>
+                <li class="grid">
+                    <a href="#image-4">
+                        <figure class="effect-apollo">
+                            <img src="images/t4.jpg" alt="image4">
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="lb-overlay" id="image-4">
+                        <img src="images/t4.jpg" alt="image4"/>
+                        <div class="gal-info">
+                            <a href="/home" class="">PICK</a>
+                            <h3 th:text="${coachs[3].username}"></h3>
+                            <p th:text="${coachs[3].motto}">/p>
+                        </div>
+                        <a href="#" class="lb-close">Close</a>
+                    </div>
+                </li>
+                <li class="grid">
+                    <a href="#image-5">
+                        <figure class="effect-apollo">
+                            <img src="images/t5.jpg" alt="image5">
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="lb-overlay" id="image-5">
+                        <img src="images/t5.jpg" alt="image5"/>
+                        <div class="gal-info">
+                            <a href="/home" class="">PICK</a>
+                            <h3 th:text="${coachs[4].username}"></h3>
+                            <p th:text="${coachs[4].motto}">/p>
+                        </div>
+                        <a href="#" class="lb-close">Close</a>
+                    </div>
+                </li>
+                <li class="grid">
+                    <a href="#image-6">
+                        <figure class="effect-apollo">
+                            <img src="images/t6.jpg" alt="image6">
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="lb-overlay" id="image-6">
+                        <img src="images/t6.jpg" alt="image6"/>
+                        <div class="gal-info">
+                            <a href="/home" class="">PICK</a>
+                            <h3 th:text="${coachs[5].username}"></h3>
+                            <p th:text="${coachs[5].motto}">/p>
+                        </div>
+                        <a href="#" class="lb-close">Close</a>
+                    </div>
+                </li>
+                <li class="grid">
+                    <a href="#image-7">
+                        <figure class="effect-apollo">
+                            <img src="images/t3.jpg" alt="image7">
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="lb-overlay" id="image-7">
+                        <img src="images/t3.jpg" alt="image7"/>
+                        <div class="gal-info">
+                            <a href="/home" class="">PICK</a>
+                            <h3 th:text="${coachs[6].username}"></h3>
+                            <p th:text="${coachs[6].motto}">/p>
+
+                        </div>
+                        <a href="#" class="lb-close">Close</a>
+                    </div>
+                </li>
+                <li class="grid">
+                    <a href="#image-8">
+                        <figure class="effect-apollo">
+                            <img src="images/t1.jpg" alt="image8">
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="lb-overlay" id="image-8">
+                        <img src="images/t1.jpg" alt="image8"/>
+                        <div class="gal-info">
+                            <a href="/home" class="">PICK</a>
+                            <h3 th:text="${coachs[7].username}"></h3>
+                            <p th:text="${coachs[7].motto}">/p>
+                        </div>
+                        <a href="#" class="lb-close">Close</a>
+                    </div>
+                </li>
+                <li class="grid">
+                    <a href="#image-1">
+                        <figure class="effect-apollo">
+                            <img src="images/t2.jpg" alt="image4">
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="lb-overlay" id="image-9">
+                        <img src="images/t2.jpg" alt="image4"/>
+                        <div class="gal-info">
+                            <a href="/home" class="">PICK</a>
+                            <h3 th:text="${coachs[8].username}"></h3>
+                            <p th:text="${coachs[8].motto}">/p>
+                        </div>
+                        <a href="#" class="lb-close">Close</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <div class="resetPrivateTrainer"><a href="/refreshTrainer"><span>换一批</span></a></div>
+    </div>
+</div>
+<!-- //gallery -->
+
+
+<!--copy-->
+</body>
+</html>

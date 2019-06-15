@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>主页</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <style>
+        ul{
+            list-style: none;
+        }
+        ul li{
+            float: left;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="userInfo" >
+        <p>用户名:<span th:text="${user.username}"></span></p>
+
+        <div th:if="${user.isVip}">
+            <p>VIP:是</p>
+        </div>
+        <div th:unless="${user.isVip}">
+            <p>VIP:否</p><span th:if="${vip}">已申请，正在处理中</span><a href="applyforvip" th:unless="${vip}">成为VIP</a>  
+        </div>
+    </div>
+    
+    <br/>
+    <div class="privateCourse">
+        <p>课程列表：</p>
+        <ul class="courseList" th:each="course:${courses}">
+            <li>
+                <p>课程名称:<span th:text="${course.coursename}"></span></p>
+                <p>课程老师:<span th:text="${course.coachname}"></span></p>
+                <p>价格:<span th:text="${course.price}"></span></p>
+                <a th:href="@{'applyforclass/'+${course.class_id}}">选择上课</a>
+            </li> 
+        </ul>
+    </div>
+</body>
+</html>

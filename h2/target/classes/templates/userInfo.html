@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="zh-CN">
+    <head>
+        <link href="css/person.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+        <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    </head>
+    <body>
+    <div data-v-2a2212a5="" class="main-header-box">
+        <div data-v-2a2212a5="" class="main-header-box">
+            <header data-v-1d573a7b="" data-v-2a2212a5="" class="main-header main-header visible">
+                <div data-v-1d573a7b="" class="container">
+                    <a data-v-1d573a7b="" href="/" class="logo">
+                        <img data-v-1d573a7b="" src="images/e.png" alt="xifoo" class="logo-img">
+                        XiFoo Gym</a>
+                    <nav data-v-1d573a7b="" role="navigation" class="main-nav">
+                        <ul data-v-1d573a7b="" class="nav-list">
+                            <li data-v-1d573a7b="" class="main-nav-list">
+                                <ul data-v-1d573a7b="" class="phone-hide">
+                                <li data-v-1d573a7b="" class="nav-item link-item route-active">
+                                    <a data-v-1d573a7b="" href="/">home</a>
+                                </li><li data-v-1d573a7b="" class="nav-item link-item activities">
+                                <a data-v-1d573a7b="" href="/pins">Trainer</a>
+                                </li>
+                                <li data-v-1d573a7b="" class="nav-item link-item activities" th:if="${user!=null}">
+                                    <a data-v-1d573a7b="" href="/p" th:text="${user.username}"></a>
+                                </li>
+                                <!--<li data-v-1d573a7b="" class="nav-item link-item">
+                                    <a data-v-1d573a7b="" href="/topics">话题</a>
+                                </li>
+                                <li data-v-1d573a7b="" class="nav-item link-item book">
+                                    <a data-v-1d573a7b="" href="/books">小册</a>
+                                </li>
+                                <li data-v-1d573a7b="" class="nav-item link-item">
+                                    <a data-v-1d573a7b="" href="/events/all">活动</a>
+                                </li>-->
+                            </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <div data-v-2a2212a5="" data-v-b8df9d56="" data-v-514f306c="" class="view-container">
+            <div data-v-2a2212a5="" class="main-header-box">
+            <main data-v-2a2212a5="" class="container main-container">
+            <div data-v-b8df9d56="" itemscope="itemscope" itemtype="http://schema.org/Person" class="user-info-block block shadow" data-v-2a2212a5="">
+                <meta itemprop="url" content="https://juejin.im/user/5b910a006fb9a05d1b2e312f"><!---->
+                <meta itemprop="name" content="小方0203"><meta itemprop="jobTitle" content="学生">
+                <div itemprop="memberOf" itemscope="itemscope" itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" th:content="${user.address}">
+            </div>
+            <div data-v-eef614a8="" data-v-702c1ac0="" data-v-b8df9d56="" data-src="https://b-gold-cdn.xitu.io/v3/static/img/default-avatar.e30559a.svg" class="lazy avatar avatar loaded" style="background-image: url(&quot;https://b-gold-cdn.xitu.io/v3/static/img/default-avatar.e30559a.svg&quot;);">
+            </div>
+            <div data-v-2a26f13d="" data-v-b8df9d56="" class="info-box info-box">
+                <div data-v-2a26f13d="" class="top">
+                    <h1 data-v-2a26f13d="" class="username" th:text="${user.username}">小方0203</h1>
+                        <!---->
+                </div>
+                <div data-v-2a26f13d="" class="position">
+                    <svg data-v-2a26f13d="" width="21" height="18" viewBox="0 0 21 18" class="icon position-icon">
+                        <g data-v-2a26f13d="" fill="none" fill-rule="evenodd">
+                            <path data-v-2a26f13d="" fill="#72777B" d="M3 8.909V6.947a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1V8.92l-6 2.184v-.42c0-.436-.336-.79-.75-.79h-1.5c-.414 0-.75.354-.75.79v.409L3 8.909zm0 .7l6 2.184v.47c0 .436.336.79.75.79h1.5c.414 0 .75-.354.75-.79v-.46l6-2.183V16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.609zm6.75 1.075h1.5v1.58h-1.5v-1.58z"></path> 
+                            <path data-v-2a26f13d="" stroke="#72777B" d="M7.5 5.213V4A1.5 1.5 0 0 1 9 2.5h3A1.5 1.5 0 0 1 13.5 4v1.213"></path>
+                        </g>
+                    </svg> 
+                <span data-v-2a26f13d="" class="content"><span data-v-2a26f13d="">学员</span>
+                    <span data-v-2a26f13d="" class="split"></span>
+                    <span data-v-2a26f13d="" th:text="${user.address}">北京交通大学</span>
+                    </span>
+                </div>
+                <div data-v-2a26f13d="" class="intro">
+                    <svg data-v-2a26f13d="" width="21" height="18" viewBox="0 0 21 18" class="icon intro-icon">
+                        <path data-v-2a26f13d="" fill="#72777B" fill-rule="evenodd" d="M4 4h13a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm9 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3 3a3 3 0 0 0-6 0h6zM5 7v1h4V7H5zm0 2.5v1h4v-1H5zM5 12v1h4v-1H5z"></path>
+                    </svg> 
+                    <span data-v-2a26f13d="" class="content">无</span>
+                    </div>
+                </div>
+                <div data-v-b8df9d56="" class="action-box">
+                    <a href="/modefiedInfo"><button data-v-b8df9d56="" st:name="settingBtn" class="setting-btn btn">编辑个人资料</button></a>
+                </div>
+            </div>
+            <div data-v-b8df9d56="" data-v-2a2212a5="" class="list-block">
+                <div data-v-5cb476ba="" data-v-b8df9d56="" class="detail-list detail-list" data-v-2a2212a5="">
+                    <div data-v-5cb476ba="" class="list-header"><div data-v-5cb476ba="" class="header-content">
+                        <div data-v-eef614a8="" data-v-702c1ac0="" data-v-5cb476ba="" data-src="https://b-gold-cdn.xitu.io/v3/static/img/default-avatar.e30559a.svg" class="lazy avatar avatar not-in-scroll-mode loaded" style="background-image: url(&quot;https://b-gold-cdn.xitu.io/v3/static/img/default-avatar.e30559a.svg&quot;);">
+                        </div>
+                        <a data-v-5cb476ba="" href="/user/5b910a006fb9a05d1b2e312f/activities" class="nav-item active">
+                            <div data-v-5cb476ba="" class="item-title">课程</div>
+                            <div data-v-5cb476ba="" class="item-count">0</div>
+                        </a>
+                        <a data-v-5cb476ba="" href="/user/5b910a006fb9a05d1b2e312f/posts" class="nav-item">
+                            <div data-v-5cb476ba="" class="item-title">教练</div>
+                            <div data-v-5cb476ba="" class="item-count">0</div>
+                        </a>
+                        <a data-v-5cb476ba="" href="/user/5b910a006fb9a05d1b2e312f/pins" class="nav-item">
+                            <div data-v-5cb476ba="" class="item-title">记录</div>
+                            <div data-v-5cb476ba="" class="item-count">
+                            </div>
+                        </a>
+                        <button data-v-5cb476ba="" st:name="settingBtn" class="setting-btn btn not-in-scroll-mode">编辑个人资料</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </main>
+        </div>
+        </div>
+    </div>
+    </body>
+
+</html>

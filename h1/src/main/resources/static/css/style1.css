@@ -1,0 +1,31 @@
+.tip{
+    width: 100%;
+    margin-top: 2em;
+}
+.tip a{
+    font-size: 16px;
+    margin-left: 1em;
+    margin-right: 3em;
+}
+.signin{
+    width: 100%;
+    margin-top: 2em;
+}
+.signin a{
+    font-size: 16px;
+    float: right;
+}
+.resetPrivateTrainer{
+    position: relative;
+    text-align:center ;
+}
+.resetPrivateTrainer span{
+    font-size: 1.2em;
+    line-height: 60px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    display: block;
+    text-decoration: none;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>源代码列表</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
+
+</head>
+<body>
+<a href="#" class="list-group-item active">
+    源代码列表
+</a>
+<div th:each="courses:${}">
+
+
+</div>
+<c:forEach items="${sourceCodeList}" var="sourceCode">
+    <a href="<%=request.getContextPath()%>/sourcecode/detail.action?id=<c:out value="${sourceCode.id}" />" class="list-group-item">
+    <c:out value="${sourceCode.title}" /></a>
+</c:forEach>
+<!-- 列表分页的DIV,由JS动态填充内容-->
+<ul class="pagination pagination-lg" id="link">
+
+</ul><br>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var totalNumber = Number(${totalPageNumber});
+        var pageSize = Number(${pageSize});
+        var pageCount = totalNumber/pageSize;
+        var html = "";
+        for(var i = 0;i<pageCount;i++){
+            var link_Url = "<li><a href=\"<%=MethodURL%>"+(i+1)+"\">"+(i+1)+"</a></li>";
+            html += link_Url;
+        }
+        var fenyeDiv = document.getElementById("link");
+        fenyeDiv.innerHTML=html;
+    });
+</script>
+</body>
+</html>
